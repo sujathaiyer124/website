@@ -15,15 +15,13 @@
 <body>
     <div id="page-container">
         <div id="main-header">
-            
+
             <div class="header-container ">
                 <div class="img-logo">
                     <a href="https://biobiz.in/">
                         <img src="https://biobiz.in/wp-content/uploads/2023/12/biobiz-logo.png" alt="BioBiz" id="logo">
                     </a>
-                    <div class="hamburger-menu">
-                        &#9776; <!-- Unicode for hamburger icon -->
-                      </div>
+
                 </div>
                 <div class="top-menu-nav-div">
                     <nav id="top-menu-nav">
@@ -74,6 +72,13 @@
                             <li class="menu-items"><a href="https://biobiz.in/contact/">Contact</a></li>
                         </ul>
                     </nav>
+                    <div class="hamburger"onClick="myFunction()"><a href="javascript:void(0);" class="icon"
+                            >
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -254,7 +259,7 @@
 
 
 
-       
+
 
 
 
@@ -281,21 +286,24 @@
 
             const slidingParagraph = document.querySelector('.sliding-paragraph');
 
-window.addEventListener('scroll', () => {
-    const paragraphPosition = slidingParagraph.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+            window.addEventListener('scroll', () => {
+                const paragraphPosition = slidingParagraph.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
 
-    if (paragraphPosition < windowHeight) {
-        slidingParagraph.classList.add('visible'); // Adds the "visible" class
-    }
-});
+                if (paragraphPosition < windowHeight) {
+                    slidingParagraph.classList.add('visible'); // Adds the "visible" class
+                }
+            });
 
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const menu = document.querySelector('.top-menu-ul');
+            function myFunction(){
+            var x = document.getElementById(".hamburger");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
 
-hamburgerMenu.addEventListener('click', () => {
-    menu.classList.toggle('active'); // Toggle menu visibility
-});
 
             // window.onscroll = function () {scrollFunction() };
             // function scrollFunction() {

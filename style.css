@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 html,
@@ -42,6 +41,7 @@ body {
     gap: 10px; */
 }
 
+  
 .top-menu-ul.active {
     display: flex;
 }
@@ -52,7 +52,7 @@ body {
     flex-direction: column;
     background-color:white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px 20px;
+    padding: 10px 10px;
     height: 60px;
     position: fixed;
     z-index: 100;
@@ -165,13 +165,17 @@ body {
 
 .img-logo img {
     height: 60px;
-    /* width: 80px; */
-    /* padding: 20px; */
     transition: height 0.4s ease;
 }
 .img-logo img:hover {
     transform: scale(1.05);
 }
+/* .top-menu-nav-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+} */
 .main-container {
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +183,6 @@ body {
     justify-content: center;
     padding: 20px;
     background-color: #e7f8e5;
-    margin: 50px auto;
     border: 1px solid #ddd;
     text-align: center;
     overflow: hidden;
@@ -477,83 +480,84 @@ footer {
     /* Add position if needed for placement */
 }
 
-
-
-/* hamburger */
-.hamburger-menu {
+  
+  .mobile-menu-items {
+    padding: 10px 0;
+  }
+  
+  .mobile-menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .mobile-menu-items a:hover {
+    color: #007bff;
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .hamburger {
+    display: none;
     font-size: 24px;
     cursor: pointer;
-    display: none;
-}
-   
+  }
+  
 
 
 @media (max-width: 768px) {
 
-    /* For tablets */
-    .main-container {
-        flex-direction: column;
-      }
-    .hamburger-menu {
-        display: block;
+    #main-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+    .top-menu-nav-div{
+        margin: auto;
+        height: 500px;
+        border-radius: 10px;
         
     }
-
-    #main-header {
-        height: auto;
+    .top-menu-nav{
+        overflow:hidden;
+        position: relative;
     }
-
     .top-menu-ul {
         display: none;
         flex-direction: column;
-       
-        width: 100%;
+        background-color: white;
         position: absolute;
-        top: 60px;
+        top: 50px;
         left: 0;
-        background-color: #f4f4f4;
-        /* padding: 10px 0; */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        right:0;
+        width: 100%;
+        padding: 10px;
+        z-index: 1000;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .top-menu-ul.active {
-        display: flex;
-        /* Show when active */
-    }
-
-    .top-menu-ul li {
-        padding: 10px;
-    }
-
-    .top-menu-ul li a {
-        color: #1a5927;
-        font-weight: 500;
-        font-size: 18px;
-        text-align: center;
-        display: block;
-        padding: 10px;
-        transition: 0.3s ease;
-    }
-
-    .top-menu-ul li a:hover {
-        color: #a212e5;
+        display: flex; /* Show menu on toggle */
     }
 
     .main-container {
-        flex-direction: column;
         padding: 10px;
     }
 
     .para {
-        margin: 20px;
-        max-width: 100%;
+        margin: 10px;
     }
 
     .links-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablets */
+        grid-template-columns: 1fr;
     }
 
+    .feed {
+        height: auto;
+    }
     .other-section .items {
         grid-template-columns: repeat(2, 1fr);
         /* 2 columns in the other section */
@@ -562,6 +566,14 @@ footer {
     .link {
         padding: 30px 20px;
     }
+    .menu-items {
+        margin: 10px 0;
+    }
+
+    .menu-items a {
+        font-size: 16px;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -592,5 +604,33 @@ footer {
     footer {
         font-size: 12px;
         padding: 15px;
+    }
+    body {
+        font-size: 14px;
+    }
+
+    #main-header {
+        padding: 10px;
+    }
+
+    .img-logo img {
+        height: 30px;
+    }
+
+    .menu-items a {
+        font-size: 14px;
+    }
+
+    .links-container {
+        gap: 10px;
+    }
+
+    .links {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
     }
 }
