@@ -512,13 +512,14 @@ footer {
     }
 
     .hamburger {
-        display: block; /* Show the hamburger icon */
+        display: block;
+        padding:10px;
+        font-size:30px ;
     }
     .top-menu-nav-div{
         margin: auto;
-        height: 500px;
-        border-radius: 10px;
-        
+        align-items:center ;
+        justify-content:center ;
     }
     .top-menu-nav{
         overflow:hidden;
@@ -529,18 +530,18 @@ footer {
         flex-direction: column;
         background-color: white;
         position: absolute;
-        top: 50px;
+        top:60px;
         left: 0;
         right:0;
         width: 100%;
         padding: 10px;
         z-index: 1000;
-        overflow: hidden;
+        /* overflow: hidden; */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .top-menu-ul.active {
-        display: flex; /* Show menu on toggle */
+        display: flex; 
     }
 
     .main-container {
